@@ -12,8 +12,11 @@ jobs:
 
       - name: run start.sh
         run: |
-          pwd
           bash ./start.sh
-      - name: check
-        run:
-          git log  
+          
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: $\{{ secrets.GITHUB_TOKEN }}
+          repository: master
+          branch: master
