@@ -1,0 +1,18 @@
+name: 定时抓取
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: run start.sh
+        run: 
+          bash ./start.sh
+      - name: check
+        run:
+          git log  
