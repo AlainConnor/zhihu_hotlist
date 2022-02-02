@@ -13,7 +13,6 @@ jobs:
       - name: run start.sh
         run: |
           pwd
-          cd zhihu_hotlist
           bash ./start.sh
       - name: check
         run:
