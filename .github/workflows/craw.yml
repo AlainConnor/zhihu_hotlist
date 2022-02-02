@@ -3,7 +3,7 @@ name: 定时抓取
 on:
   workflow_dispatch:
   schedule:
-  - cron: '1 * * * *'
+  - cron: '0/1 * * * *'
 
 jobs:
   build:
