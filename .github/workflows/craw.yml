@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3.0.1
+      - uses: actions/checkout@main
 
       - name: run start.sh
         run: |
           bash ./start.sh
           
       - name: GitHub Push
-        uses: buildtool/push-action@v1
+        uses: ad-m/github-push-action@master
         with:
           github_token: $\{{ secrets.GITHUB_TOKEN }}
           branch: main
